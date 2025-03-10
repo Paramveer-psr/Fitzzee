@@ -1,20 +1,16 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom';
 import '../footer/Footer.css'
 import setupFormListener from '../footer/contactMessage' 
 
 const Footer = () => {
 
-  useEffect(() => {
-    setupFormListener();
-  }, []);
-
   return (
   <div id="contact">
     <div className="elements">
       <div className="left-elements">
         <div className="footer-icons">
-          <h2>MyFitness</h2>
+          <h2>Fitzzee</h2>
           <p>"Thanks for visiting our website. Your support means the <br/>world to us. Explore, enjoy, and stay
             connected
             for more <br/>exciting updates!"<br/><br/></p>
@@ -27,18 +23,18 @@ const Footer = () => {
             <a className="Instagram" href="#" target="_blank"><i className="fab fa-instagram"></i></a>
           </div>
           <div className="copyright">
-            <p>Copyright © 2024 MyFitness, All Rights Reserved.</p>
+            <p>Copyright © 2024 Fitzzee, All Rights Reserved.</p>
           </div>
         </div>
         <div className="important-links">
           <h2>Important Links</h2>
           <nav>
-            <li><a href="#">Disease Predictor</a></li>
-            <li><a href="#">Daily Calories Requirement</a></li>
+            <li><Link to="/diseasesPrediction">Disease Predictor</Link></li>
+            <li><Link to="/calorieCalculator">Calorie Calculator</Link></li>
             <li><Link to="/bmiCalculator">BMI Calculator</Link></li>
-            <li><a href="#">Workout Plans</a></li>
-            <li><a href="#">Nutrition Guidance</a></li>
-            <li><a href="#">Blogs</a></li>
+            <li><Link to="#">Workout Plans</Link></li>
+            <li><Link to="#">Nutrition Guidance</Link></li>
+            <li><Link to="#">Blogs</Link></li>
           </nav>
         </div>
       </div>
@@ -48,7 +44,7 @@ const Footer = () => {
           <input type="text" name="Name" placeholder="Your Name" required/>
           <input type="email" name="Email" placeholder="Your Email" required/>
           <textarea name="Message" maxLength="200" rows="3" placeholder="Your Message" required></textarea>
-          <button type="submit">
+          <button type="submit" onClick={setupFormListener}>
             <i className="fas fa-paper-plane"></i> <b>Send</b>
           </button>
         </form>

@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+.calorie-page {
+    display: flex;
+    margin: 50px 150px;
+}
+
+.calorie-container {
+    max-width: 400px;
+    padding: 10px 10px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+input,
+select,
+button {
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: solid 2px black;
+    position: relative;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.calorie-content {
+    flex-basis: 70%;
+    margin-left: 40px;
+    font-size: large;
+}
