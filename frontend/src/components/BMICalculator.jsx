@@ -24,14 +24,14 @@ const itemVariants = {
   }
 };
 
-const BMICalculator: React.FC = () => {
+const BMICalculator = () => {
   const [height, setHeight] = useState('');
   const [weight, setWeight] = useState('');
-  const [bmiResult, setBmiResult] = useState<number | null>(null);
+  const [bmiResult, setBmiResult] = useState(null);
   const [bmiCategory, setBmiCategory] = useState('');
   const [categoryColor, setCategoryColor] = useState('');
 
-  const calculateBMI = (e: React.FormEvent) => {
+  const calculateBMI = (e) => {
     e.preventDefault();
     const heightInMeters = parseFloat(height) / 100;
     const weightInKg = parseFloat(weight);

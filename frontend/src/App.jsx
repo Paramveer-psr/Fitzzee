@@ -9,7 +9,7 @@ import HealthVlogs from './components/HealthVlogs';
 import NutritionGuide from './components/NutritionGuide';
 import Home from './components/Home';
 
-const App: React.FC = () => {
+const App = () => {
   return (
     <Router>
       <div className="min-h-screen bg-gray-50">
@@ -28,4 +28,4 @@ const App: React.FC = () => {
   );
 };
 
-export default App;
+export default App; 

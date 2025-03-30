@@ -2,7 +2,32 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
-const Navbar: React.FC = () => {
+const NavLink = ({ to, children }) => (
+  <motion.div
+    whileHover={{ scale: 1.1 }}
+    whileTap={{ scale: 0.95 }}
+  >
+    <Link to={to} className="hover:text-blue-200 transition-colors">
+      {children}
+    </Link>
+  </motion.div>
+);
+
+const MobileNavLink = ({ to, onClick, children }) => (
+  <motion.div
+    whileTap={{ scale: 0.95 }}
+  >
+    <Link 
+      to={to} 
+      className="block px-2 py-1 text-white hover:bg-blue-700 rounded transition-colors"
+      onClick={onClick}
+    >
+      {children}
+    </Link>
+  </motion.div>
+);
+
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -86,36 +111,5 @@ const Navbar: React.FC = () => {
     </nav>
   );
 };
-
-// Desktop navigation link with animation
-const NavLink: React.FC<{ to: string; children: React.ReactNode }> = ({ to, children }) => (
-  <motion.div
-    whileHover={{ scale: 1.1 }}
-    whileTap={{ scale: 0.95 }}
-  >
-    <Link to={to} className="hover:text-blue-200 transition-colors">
-      {children}
-    </Link>
-  </motion.div>
-);
-
-// Mobile navigation link
-const MobileNavLink: React.FC<{ to: string; onClick: () => void; children: React.ReactNode }> = ({ 
-  to, 
-  onClick, 
-  children 
-}) => (
-  <motion.div
-    whileTap={{ scale: 0.95 }}
-  >
-    <Link 
-      to={to} 
-      className="block px-2 py-1 text-white hover:bg-blue-700 rounded transition-colors"
-      onClick={onClick}
-    >
-      {children}
-    </Link>
-  </motion.div>
-);
 
 export default Navbar; 

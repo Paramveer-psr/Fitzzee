@@ -64,7 +64,7 @@ const itemVariants = {
   }
 };
 
-const Home: React.FC = () => {
+const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section with background image */}
