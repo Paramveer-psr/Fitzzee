@@ -66,13 +66,13 @@ def diagnosis():
 
     desc, syms, med, prec, diet, work = print_information(prediction)
     return jsonify({
-      'result': prediction,
-      'description': desc.tolist() if len(desc) else [],
-      'symptoms': syms,
-      'medications': med.tolist() if len(med) else [],
-      'precautions': prec,
-      'diet': diet.tolist() if len(diet) else [],
-      'workout': work.tolist() if len(work) else []
+      'result': prediction
+    #   'description': desc.tolist() if len(desc) else [],
+    #   'symptoms': syms,
+    #   'medications': med.tolist() if len(med) else [],
+    #   'precautions': prec,
+    #   'diet': diet.tolist() if len(diet) else [],
+    #   'workout': work.tolist() if len(work) else []
     })
 
 # Add your Flask run invocation as needed

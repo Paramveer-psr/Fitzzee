@@ -49,6 +49,7 @@ nav ul {
 nav ul li {
     display: inline;
     margin-left: 50px;
+    cursor: pointer;
 }
 
 nav ul li:first-child {
