@@ -1,0 +1,22 @@
+.about {
+  margin: 40px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-about {
+  max-width: 50%;
+  text-align: justify;
+  margin-left: 60px;
+}
+
+.right-about {
+  max-width: 50%;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+
+.right-about img {
+  max-width: 75%;
+}
