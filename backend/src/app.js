@@ -21,7 +21,7 @@ app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get("/", (req, res) => {
+app.get("/", (_, res) => {
   res.send("Welcome to Fitzee!");
 });
 
@@ -29,8 +29,13 @@ app.get("/", (req, res) => {
 // import { errorHandler } from "./middlewares/errorHandler.middleware.js";
 // app.use("/api/auth/users", userRouter);
 // app.use(errorHandler);
+import userRouter from "./routes/user.routes.js";
+app.use("/api/auth", userRouter);
 
 import featureRouter from "./routes/features.routes.js";
 app.use("/api/features", featureRouter);
+
+import { errorHandler } from "./middlewares/errorHandler.middleware.js";
+app.use(errorHandler);
 
 export { app };
