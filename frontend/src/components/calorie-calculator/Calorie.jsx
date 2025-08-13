@@ -28,7 +28,7 @@ const Calorie = () => {
                         <option value="very-active">Very active (hard exercise/sports 6-7 days a week)</option>
                         <option value="extra-active">Extra active (very hard exercise/sports & physical job)</option>
                     </select><br /><br />
-                    <button onClick={calorieCalculate}>Calculate Calories</button><br /><br />
+                    <button className='calorie-button' onClick={calorieCalculate}>Calculate Calories</button><br /><br />
                     <div id="result"></div>
                 </div>
                 <div className="calorie-content">

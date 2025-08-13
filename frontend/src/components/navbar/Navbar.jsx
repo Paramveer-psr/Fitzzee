@@ -1,20 +1,33 @@
 import React from 'react'
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import '../navbar/Navbar.css'
 import myImage from '../../../src/images/logo.png'
 import Auth from '../login-signup/Auth';
-import About from '../about/About';
+
 
 function Navbar() {
   const [showAuth, setShowAuth] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const scrollToSection = (section) => {
+    if (location.pathname === '/') {
+      // Already at home – dispatch custom scroll event
+      const event = new CustomEvent('scrollToSection', { detail: section });
+      window.dispatchEvent(event);
+    } else {
+      // Navigate to home, then scroll via location.state
+      navigate('/', { state: { scrollTo: section } });
+    }
+  };
   return (
-    <div>
+    <>
       <header>
         <div className="heading">
           <div className="logo">
             <Link to="/"><img src={myImage} alt="Fitzzee Logo" /></Link>
-            <h1>Fitzzee</h1>
+            <h1 className='website-name'>Fitzzee</h1>
           </div>
           <div className="navigation-menu">
             <nav>
@@ -41,18 +54,18 @@ function Navbar() {
                     <li><a href="#">Cardiology</a></li>
                   </ul>
                 </li>
-                <li><a href="/Blog/">Blog</a></li>
+                <li><Link to="/blog">Blog</Link></li>
                 <li><a href="/Reviews/">Reviews</a></li>
-                <li><Link to="#">About</Link></li>
-                <li><a href="#contact">Contact</a></li>
+                <li onClick={() => scrollToSection('about')}>About</li>
+                <li onClick={() => scrollToSection('contact')}>Contact</li>
                 <li><i onClick={() => setShowAuth(true)} className="fa-regular fa-user"></i></li>
               </ul>
             </nav>
           </div>
         </div>
       </header>
-      {showAuth && <Auth onClose={() => setShowAuth(false)}/>}
-    </div>
+      {showAuth && <Auth onClose={() => setShowAuth(false)} />}
+    </>
   )
 }
 

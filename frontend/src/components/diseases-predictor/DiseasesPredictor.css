@@ -32,7 +32,7 @@ select option:first-child {
     color: #888888;
 }
 
-button {
+.diseases-predict {
     padding-bottom: 10px 10px;
     margin-bottom: 20px;
     background-color: #4caf50;
@@ -42,6 +42,6 @@ button {
     border-radius: 5px;
 }
 
-button:hover {
+.diseases-predict:hover {
     background-color: #45a049;
 }
