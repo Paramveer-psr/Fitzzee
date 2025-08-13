@@ -1,10 +1,11 @@
 import mongoose from "mongoose";
 import { Review } from "../models/review.model.js";
 import { ApiError } from "../utils/ApiError.js";
-import { ApiResponse } from "../utils/ApiResponse";
+import { ApiResponse } from "../utils/ApiResponse.js";
 import { asyncHandler } from "../utils/asyncHandler.js";
 
 const addReview = asyncHandler(async (req, res) => {
+  // console.log(req.body);
   const { rating, feedback } = req.body;
   const userId = req.user._id;
   if ([rating, feedback].some((val) => !val)) {
