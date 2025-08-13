@@ -28,14 +28,14 @@ button {
     position: relative;
 }
 
-button {
+.calorie-button {
     background-color: #4CAF50;
     color: white;
     border: none;
     cursor: pointer;
 }
 
-button:hover {
+.calorie-button:hover {
     background-color: #45a049;
 }
 

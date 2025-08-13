@@ -7,7 +7,7 @@ const Bmi = () => {
 
     return (
         <>
-            <div className="bmi-page">
+            <div className="bmi-page"> 
                 <div className="bmi-container">
                     <h1>BMI Calculator</h1>
                     <label htmlFor="height"><b>Height:</b></label>
@@ -29,7 +29,7 @@ const Bmi = () => {
                         <option value="male">Male</option>
                         <option value="female">Female</option>
                     </select><br /><br />
-                    <button onClick={calculateBMI} >Calculate BMI</button><br /><br />
+                    <button className="bmi-button" onClick={calculateBMI} >Calculate BMI</button><br /><br />
                     <div id="result"></div>
                     <div className="bmi-table">
                         <img src={myImage} alt="BMI-Table" />

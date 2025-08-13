@@ -10,7 +10,7 @@
     justify-content: center;
     z-index: 9999;
 }
-
+ 
 .auth-modal-content {
     background: #fff;
     padding: 2rem 2.5rem;
@@ -37,10 +37,6 @@
     border: none;
     font-size: 1.3rem;
     cursor: pointer;
-}
-
-.auth-close-btn:hover {
-    background-color: white;
 }
 
 .auth-form{
@@ -83,6 +79,10 @@
     margin-top: 0.7rem;
     cursor: pointer;
     transition: background 0.2s;
+}
+
+.auth-button:hover {
+    background-color: darkgreen;
 }
 
 .auth-toggle-text {

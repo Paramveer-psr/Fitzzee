@@ -23,7 +23,7 @@ const Footer = () => {
             <a className="Instagram" href="#" target="_blank"><i className="fab fa-instagram"></i></a>
           </div>
           <div className="copyright">
-            <p>Copyright © 2024 Fitzzee, All Rights Reserved.</p>
+            <p>Copyright © 2025 Fitzzee, All Rights Reserved.</p>
           </div>
         </div>
         <div className="important-links">
@@ -44,7 +44,7 @@ const Footer = () => {
           <input type="text" name="Name" placeholder="Your Name" required/>
           <input type="email" name="Email" placeholder="Your Email" required/>
           <textarea name="Message" maxLength="200" rows="3" placeholder="Your Message" required></textarea>
-          <button type="submit" onClick={setupFormListener}>
+          <button className='query-send-button' type="submit" onClick={setupFormListener}>
             <i className="fas fa-paper-plane"></i> <b>Send</b>
           </button>
         </form>

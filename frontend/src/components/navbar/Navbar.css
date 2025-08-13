@@ -3,6 +3,10 @@ body {
     margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* ---------Nav Menu------------ */
 header {
     background-color: #333;
@@ -32,7 +36,7 @@ header {
     border-radius: 100%;
 }
 
-.logo h1 {
+header .website-name {
     font-size: 24px;
     color: #fff;
     margin: calc();
@@ -59,7 +63,10 @@ nav ul li:first-child {
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 18px;
+}
+
+.navigation-menu{
+    font-size: 20px;
 }
 
 /* Styles for the sub-menu */

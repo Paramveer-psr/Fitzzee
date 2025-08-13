@@ -8,7 +8,7 @@ const MiniFooter = () => {
                 <p><b><a href="#">Home</a> | <a href="#">About</a> | <a href="#">Reviews</a> | <a href="#">Contact</a></b></p>
             </div>
             <div className="copyright">
-                <p>Copyright © 2024 Fitzzee, All Rights Reserved.</p>
+                <p>Copyright © 2025 Fitzzee, All Rights Reserved.</p>
             </div>
         </div>
     )

@@ -100,12 +100,13 @@ form textarea {
     margin: 3px 0;
 }
 
-.right-elements form button {
+.right-elements form .query-send-button {
     background: lightgreen;
     color: #fff;
     border-radius: 5px;
     padding: 8px 10px;
     font-size: medium;
+    cursor: pointer;
 }
 
 #msg {

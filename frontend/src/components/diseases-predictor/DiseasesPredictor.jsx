@@ -265,7 +265,7 @@ const DiseasesPredictor = () => {
                     </div>
                 </div>
 
-                <button onClick={handleSubmit}>Predict Disease</button>
+                <button className="diseases-predict" onClick={handleSubmit}>Predict Disease</button>
                 <div className="prediction-result">
                     {predictionResult && (
                         <div><b>Prediction Result:</b> {predictionResult}</div>
