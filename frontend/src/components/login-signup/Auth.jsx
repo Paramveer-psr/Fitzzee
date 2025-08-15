@@ -19,11 +19,18 @@ function Auth({ onClose }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!isLogin) {
-      const { data } = await axios.post(registerRoute, formData);
-      console.log(data);
+      const { data } = await axios.post(registerRoute, formData, {
+        withCredentials: true,
+      });
+      if (data.success === true) {
+        setIsLogin(true);
+      }
     } else {
-      const { data } = await axios.post(loginRoute, formData);
-      console.log(data);
+      const { data } = await axios.post(loginRoute, formData, {
+        withCredentials: true,
+      });
+      localStorage.setItem("token", JSON.stringify(data.data.accessToken));
+      localStorage.setItem("user", JSON.stringify(data.data.user));
     }
     // localStorage.setItem(data.data);
   };

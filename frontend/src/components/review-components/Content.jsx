@@ -4,7 +4,7 @@ import ReviewForm from './review-form/ReviewForm'
 import './Content.css'
 import ReviewBox from './review-box/ReviewBox';
 
-function Content() {
+function Content({ user }) {
   const [showReviewForm, setShowReviewForm] = useState(false);
   return (
     <>
@@ -25,7 +25,7 @@ function Content() {
         <ReviewBox />
       </div>
     </>
-  )
+  );
 }
 
-export default Content
+export default Content;
