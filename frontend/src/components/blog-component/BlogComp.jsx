@@ -8,7 +8,7 @@ const BlogComp = () => {
         <section id="blog">
             <div className="blog-heading">
                 <span>Our Recent Posts</span>
-                <h3>Our Blog</h3>
+                <h3>Our Blog</h3> 
             </div>
             <div className="blog-container" id="blogContainer">
                 <div className="blog-box">
