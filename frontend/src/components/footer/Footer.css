@@ -9,8 +9,8 @@ body {
 #contact {
     width: 100%;
     position: relative;
+    padding-bottom: 20px;
     margin-top: 10px;
-    bottom: 0;
     height: 48vh;
     background: #333;
     color: white;
@@ -21,6 +21,7 @@ body {
     padding: 0px 50px;
     display: flex;
     justify-content: space-between;
+    
 }
 
 .left-elements {
@@ -117,5 +118,4 @@ form textarea {
 
 .copyright {
     text-align: center;
-    margin-bottom: 5px;
 }

@@ -32,6 +32,7 @@ function Navbar() {
           <div className="navigation-menu">
             <nav>
               <ul>
+                <li><Link to="/">Home</Link></li>
                 <li className="dropdown">
                   <a href="#services">Services &#9662;</a>
                   <ul className="submenu">
@@ -55,7 +56,7 @@ function Navbar() {
                   </ul>
                 </li>
                 <li><Link to="/blog">Blog</Link></li>
-                <li><a href="/Reviews/">Reviews</a></li>
+                <li><Link to="/reviews">Reviews</Link></li>
                 <li onClick={() => scrollToSection('about')}>About</li>
                 <li onClick={() => scrollToSection('contact')}>Contact</li>
                 <li><i onClick={() => setShowAuth(true)} className="fa-regular fa-user"></i></li>

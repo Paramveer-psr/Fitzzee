@@ -39,9 +39,9 @@ header {
 header .website-name {
     font-size: 24px;
     color: #fff;
-    margin: calc();
+    margin: auto;
 }
-
+ 
 /* Navigation styles */
 nav ul {
     list-style-type: none;

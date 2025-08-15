@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import Footer from '../../components/footer/Footer'
 import Navbar from '../../components/navbar/Navbar';
+import MiniFooter from '../../components/mini-footer/MiniFooter';
 import HeroSection from '../../components/heroSection/HeroSection';
 import About from '../../components/about/About';
 import { useLocation, useNavigate } from 'react-router-dom';
