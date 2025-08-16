@@ -7,8 +7,8 @@ import {
 } from "../controllers/review.controller.js";
 const router = Router();
 
+router.get("/", viewReview);
 router.post("/add-review", verifyJWT, addReview);
 router.delete("/delete-review/:id", verifyJWT, deleteReview);
-router.get("/", viewReview);
 
 export default router;

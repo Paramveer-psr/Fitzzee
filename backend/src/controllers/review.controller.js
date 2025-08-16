@@ -34,9 +34,11 @@ const deleteReview = asyncHandler(async (req, res) => {
     .status(200)
     .json(new ApiResponse(200, reviewToDelete, "Review Deleted"));
 });
-
+``;
 const viewReview = asyncHandler(async (req, res) => {
-  const reviews = await Review.find().populate("user", "name email");
+  const reviews = await Review.find()
+    .populate("user", "name email")
+    .sort({ createdAt: -1 });
   return res
     .status(200)
     .json(new ApiResponse(200, reviews, "Reviews Fetched Successfully"));

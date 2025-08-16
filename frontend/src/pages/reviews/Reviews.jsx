@@ -2,6 +2,8 @@ import React from "react";
 import Navbar from "../../components/navbar/Navbar";
 import MiniFooter from "../../components/mini-footer/MiniFooter";
 import Content from "../../components/review-components/Content";
+import { api } from "../../utils/ApiService";
+import { useEffect } from "react";
 
 function Reviews() {
   const user = JSON.parse(localStorage.getItem("user"));

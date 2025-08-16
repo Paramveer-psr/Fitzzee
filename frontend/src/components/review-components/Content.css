@@ -3,11 +3,11 @@
 }
 
 .review-page-heading {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
-    opacity: 0;
-    animation: popInOut 4s ease-in-out forwards;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  opacity: 0;
+  animation: popInOut 4s ease-in-out forwards;
 }
 
 @keyframes popInOut {
@@ -56,16 +56,43 @@
 }
 
 .review-button:hover {
-    background-color: darkgreen;
+  background-color: darkgreen;
 }
 
-.customer-reviews{
+.customer-reviews {
   text-align: center;
 }
 
-.customer-reviews span{
+.customer-reviews span {
   text-align: center;
   font-size: 24px;
   font-weight: bold;
   color: #f33c3c;
+}
+
+.review-box-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.review-loading-button {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.review-loading-button button {
+  cursor: pointer;
+  color: #fff;
+  background-color: lightgreen;
+  border: none;
+}
+
+.review-loading-button button:hover {
+  background-color: darkgreen;
 }

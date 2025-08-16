@@ -1,21 +1,16 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaStar } from "react-icons/fa";
 import "./ReviewForm.css"; // Link to the external CSS file
-import axios from "axios";
-import { addReviewRoute } from "../../../utils/ApiRoutes";
-import { api } from "../../../utils/ApiService";
 
-function ReviewForm({ user, onClose }) {
-  const [rating, setRating] = useState(0);
+function ReviewForm({
+  user,
+  formData,
+  onChange,
+  handleSubmit,
+  onClose,
+  message,
+}) {
   const [hover, setHover] = useState(null);
-  const [feedback, setFeedback] = useState("");
-  const handleSubmit = async () => {
-    const { data } = await api.post("/reviews/add-review", {
-      rating,
-      feedback,
-    });
-    console.log(data);
-  };
 
   return (
     <div className="review-form-overlay">
@@ -49,16 +44,19 @@ function ReviewForm({ user, onClose }) {
                 return (
                   <button
                     type="button"
+                    required
                     key={index}
                     className="star-button"
-                    onClick={() => setRating(currentRating)}
+                    onClick={() => onChange("rating", currentRating)}
                     onMouseEnter={() => setHover(currentRating)}
                     onMouseLeave={() => setHover(null)}
                   >
                     <FaStar
                       size={28}
                       className={`star-icon ${
-                        currentRating <= (hover || rating) ? "active" : ""
+                        currentRating <= (hover || formData.rating)
+                          ? "active"
+                          : ""
                       }`}
                     />
                   </button>
@@ -77,7 +75,9 @@ function ReviewForm({ user, onClose }) {
               className="form-textarea"
               name="feedback"
               placeholder="Write your feedback here..."
-              onChange={(e) => setFeedback(e.target.value)}
+              required
+              maxLength="350"
+              onChange={(e) => onChange("feedback", e.target.value)}
             ></textarea>
           </div>
 
@@ -86,6 +86,7 @@ function ReviewForm({ user, onClose }) {
             <button type="submit" className="review-submit-button">
               Submit
             </button>
+            <p>{message}</p>
           </div>
         </form>
       </div>
