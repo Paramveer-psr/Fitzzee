@@ -4,7 +4,8 @@ import ReviewForm from './review-form/ReviewForm'
 import './Content.css'
 import ReviewBox from './review-box/ReviewBox';
 
-function Content({ user }) {
+function Content() {
+
   const [showReviewForm, setShowReviewForm] = useState(false);
   return (
     <>

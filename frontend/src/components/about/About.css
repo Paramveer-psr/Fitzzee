@@ -1,5 +1,4 @@
 .about {
-  margin: 40px 0px;
   display: flex;
   justify-content: space-between;
 }
@@ -7,7 +6,7 @@
 .left-about {
   max-width: 50%;
   text-align: justify;
-  margin-left: 60px;
+  margin-left: 70px;
 }
 
 .right-about {
