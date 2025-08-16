@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 import Footer from '../../components/footer/Footer'
 import Navbar from '../../components/navbar/Navbar';
-import MiniFooter from '../../components/mini-footer/MiniFooter';
 import HeroSection from '../../components/heroSection/HeroSection';
 import About from '../../components/about/About';
+import Testimonials from '../../components/testimonials/Testimonials';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 
@@ -47,6 +47,7 @@ function Home() {
         <>
             <Navbar />
             <HeroSection />
+            <Testimonials />
             <div ref={aboutRef}>
                 <About />
             </div>
