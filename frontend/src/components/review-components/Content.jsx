@@ -4,8 +4,7 @@ import "./Content.css";
 import ReviewBox from "./review-box/ReviewBox";
 import { api } from "../../utils/ApiService";
 
-function Content() {
-
+function Content({ user }) {
   const [showReviewForm, setShowReviewForm] = useState(false);
   const [message, setMessage] = useState("");
   const [reviews, setReviews] = useState([]);
